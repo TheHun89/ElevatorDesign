@@ -6,6 +6,7 @@ import java.util.*;
 
 public class Main {
 
+    /** IGNORE - this was just some troubleshooting to see what data structures might work best **/
     public static void main(String[] args) {
 
         SortedSet<Integer> requests = new TreeSet<>();
@@ -35,8 +36,10 @@ public class Main {
         requestHandlerImpl.addRequest(new Request(2, Direction.STOPPED));
 
         for (Request request: requestHandlerImpl.requests) {
-            System.out.println(request.getFloor() + "   " + request.direction);
+            System.out.println(request.floor + "   " + request.direction);
         }
+
+        System.out.println("requestHandlerImpl.requests is " + requestHandlerImpl.requests);
 
         //requestHandlerImpl.addRequest(1);
 

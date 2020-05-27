@@ -2,10 +2,8 @@ package com.example.elevator_design;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
-public class RequestHandlerImpl implements RequestHandler {
+public class RequestHandlerImpl implements IRequestHandler {
 
     public Set<Request> requests;
     public RequestAlgorithm requestAlgorithm;
@@ -17,13 +15,6 @@ public class RequestHandlerImpl implements RequestHandler {
     }
 
     public void addRequest(Request request) {
-//        if (FloorButton.class.isInstance(object)) {
-//            System.out.println("Floor request");
-//        }
-//
-//        if (ElevatorButton.class.isInstance(object)) {
-//            System.out.println("Elevator request");
-//        }
         requests.add(request);
     }
 

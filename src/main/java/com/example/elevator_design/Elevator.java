@@ -9,37 +9,22 @@ public class Elevator {
 
     public SortedSet<Integer> requestedStops;
 
-//    public int capacity;
+    //public Button button;
 
-//    public Button button;
-
+    public int capacity;
     public int currentFloor;
-
     public Direction direction = Direction.STOPPED;
     public DoorStatus doorStatus = DoorStatus.CLOSE;
-    //public ElevatorStatus elevatorStatus = ElevatorStatus.STOPPED;
 
-    public void moveUp() {
-        this.currentFloor++;
-    }
+    public void moveUp() { this.currentFloor++; }
 
-    public void moveDown() {
-        this.currentFloor--;
-    }
+    public void moveDown() { this.currentFloor--; }
 
-    public void openDoors() {
-        doorStatus = DoorStatus.OPEN;
-    }
+    public void openDoors() { doorStatus = DoorStatus.OPEN; }
 
-    public void closeDoors() {
-        doorStatus = DoorStatus.CLOSE;
-    }
+    public void closeDoors() { doorStatus = DoorStatus.CLOSE; }
 
-    public boolean reachedFinalDestination() {
-
-        if (requestedStops.size() == 0) {
-            // check RequestHandler
-        }
+    public void startElevator() {
 
         // if direction == UP
 
@@ -57,6 +42,8 @@ public class Elevator {
         // then grab all the requests going down and change direction to DOWN
         // else
         // get all requestHandler.requests that are greater
-        return false;
     }
+
+    public void stopElevator() {}
+
 }

@@ -1,6 +1,6 @@
 package com.example.elevator_design;
 
-public interface RequestHandler {
+public interface IRequestHandler {
 
     void addRequest(Request request);
     void removeRequest(Request request);

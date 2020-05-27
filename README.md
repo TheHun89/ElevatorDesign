@@ -29,56 +29,10 @@ Be able to UML, Sequence and Component diagrams
 ### Ask questions
 ---
 Conceptually, how should the elevator behave?
-One elevator then it should go all the way up then all the way down.  
-So a data structure that maintains order would be a **queue** of just the requested direction.
-
-But you wouldn't want the elevator to be going up and then pick up someone
-who wants to go down.  So an alternative would be to use some form of HashMap.
-You may also want to not have duplicate requests so you could use some form of a Set.
-So a better data structure would be something that uses **key/value**.
-Furthermore you
-  * Some kind of a queue with key/value: floor/direction
-  * elevator should have a collection of requests it plans to process
-  * grab highest request and process all request from elevator current floor to highest request
-  * when the requests are all completed then check outstanding requests and process
-    all of the requests from current floor to lowest request
-
-What components are involved?
-
-User (Client)
-* makes request
-
-Button
-* illuminates when clicked
-
-Elevator
-* button for floor
-* direction - UP, DOWN, STOPPED
-* destination
-* doors - open, close
-* capacity
-* pick up passengers
-* list of floors to stop
-* maxFloors
-* trigger emergency brake
-
-Floor
-* button for direction
 
 What are the use cases?
 
 What are the classes?
-RequestHandler - Something to handle requests
-Button <- FloorButton which requests up or down, ElevatorButton which requests floor
-ElevatorController
-Elevator
-Enums - Direction, DoorStatus, ElevatorStatus
-
-
-Enums - OPEN, CLOSED, UP, DOWN, STOPPED
-
-
-
 
 
 ### Resources
